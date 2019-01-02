@@ -10,7 +10,7 @@ const finlabsChannelId = "529986518459088897" // Right ID: "509760275885588500"|
 
 bot.on('message', msg => {
   // Only continues when it's either the d0x or finlabs channel
-  if (msg.channel.id === "529986548079394819" || msg.channel.id === "529986518459088897") {
+  if (msg.channel.id === d0xChannelId || msg.channel.id === finlabsChannelId) {
     // Too prevent infinate loop between the bot and itself
     if (`${msg.author.username + "#" + msg.author.discriminator}` !== bot.user.tag) {
       if (msg.channel.id === d0xChannelId) {
